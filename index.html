@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="hero-section">
+        <!-- Background fade -->
+        <div class="bg-fade"></div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="logo"><img src="assets/Group 14.png" alt=""></div>
+
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            
+            <ul class="nav-links">
+                <li><a href="#modes">MODES</a></li>
+                <li><a href="#performance">PERFORMANCE</a></li>
+                <li><a href="#design">DESIGN</a></li>
+                <li><a href="#technology">TECHNOLOGY</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content-container">
+            <h1 class="main-heading">THE FUTURE OF SPEED</h1>
+            
+            <div class="hero-car-container">
+                <img src="assets/Screenshot_2025-12-03_at_6.32.13_PM-removebg-preview 1.png" 
+                     alt="Sports Car" 
+                     class="car-image">
+                
+                <!-- White fade lights -->
+                <div class="light-fade left"></div>
+                <div class="light-fade right"></div>
+            </div>
+
+            <p class="tagline">
+                WHERE LUXURY MEETS PERFORMANCE. EXPLORE A<br>
+                CURATED COLLECTION OF THE WORLD'S
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <section class="stats-section">
+        <div class="stats-container">
+            <!-- Stat 1: Top Speed -->
+            <div class="stat-item">
+                <div class="row">
+                <div class="stat-number" data-target="398KM/H">0</div>
+                <div class="stat-label">KM/H</div>
+            </div>
+                <div class="stat-label" style="margin-top: 0.5rem; font-size: 0.9rem;">TOP SPEED</div>
+            </div>
+      
+            <!-- Stat 2: Acceleration -->
+            <div class="stat-item">
+                <div class="row">
+                    <div class="stat-number" data-target="1.1" data-decimal="true">0.0</div>
+                    <div class="stat-label">SEC</div>
+                </div>
+                    <div class="stat-label" style="margin-top: 0.5rem; font-size: 0.9rem;">0-100 KM/H</div>
+                </div>
+
+            <!-- Stat 3: Horsepower -->
+            <div class="stat-item">
+            <div class="row">
+                <div class="stat-number" data-target="682">0</div>
+                <div class="stat-label">HP</div>
+            </div>
+                <div class="stat-label" style="margin-top: 0.5rem; font-size: 0.9rem;">HOURSEPOWER</div>
+            </div>
+
+        </div>
+
+
+            <div class="row1">
+                <h2>High Performance Power</h2> 
+                <img src="assets/arcticons_pakwheels.png" alt="">
+                <h2>Extreme Top Speed</h2> 
+                <img src="assets/arcticons_pakwheels.png" alt="">
+                <h2>Rapid Acceleration Time</h2> 
+            </div>
+        
+    </section>
+
+
+
+
+   <!-- Section 1: Initial Car Position -->
+ <!-- Section 1: Front view - slightly bigger -->
+ <section class="thirdsection" id="section1">
+    <div class="car-container" id="carContainer">
+        <model-viewer 
+            id="carModel"
+            src="models/2016_porsche_911_carrera_s.glb"
+            ios-src="models/2016_Porsche_911_Carrera_S.usdz"
+            alt="Porsche 911"
+            camera-controls
+            disable-zoom
+            auto-rotate
+            rotation-per-second="30deg"
+            camera-orbit="45deg 85deg 2.5m"
+            interaction-prompt="none"
+            style="width: 100%; height: 100%;">
+        </model-viewer>
+    </div>
+</section>
+
+<!-- Section 2: Performance (Rear View - 180deg) -->
+<section class="info-section" id="section2">
+    <div class="info-image" id="imageTarget1">
+        <model-viewer 
+            src="models/2016_porsche_911_carrera_s.glb"
+            ios-src="models/2016_Porsche_911_Carrera_S.usdz"
+            alt="Porsche 911 Rear"
+            camera-controls
+            disable-zoom
+            rotation-per-second="30deg"
+            camera-orbit="180deg 85deg 2.5m"
+            interaction-prompt="none">
+        </model-viewer>
+    </div>
+    <div class="info-content">
+        <h2>PERFORMANCE</h2>
+        <p>Experience raw power and precision engineering in every curve. The perfect balance of speed and control.</p>
+        <button class="explore-btn">EXPLORE MORE</button>
+    </div>
+</section>
+
+<!-- Section 3: Engineering (Side/Front View - 315deg) -->
+<section class="info-section reverse" id="section3">
+    <div class="info-image" id="imageTarget2">
+        <model-viewer 
+            src="models/2016_porsche_911_carrera_s.glb"
+            ios-src="models/2016_Porsche_911_Carrera_S.usdz"
+            alt="Porsche 911 Side"
+            camera-controls
+            disable-zoom
+            rotation-per-second="30deg"
+            camera-orbit="90deg 85deg 2.5m"
+            interaction-prompt="none">
+        </model-viewer>
+    </div>
+    <div class="info-content">
+        <h2>DRIVEN BY ENGINEERING EXCELLENCE</h2>
+        <p>Every component is crafted with precision for the ultimate driving experience. Innovation meets tradition.</p>
+        <button class="explore-btn">OUR TECHNOLOGY</button>
+    </div>
+</section>
+
+
+
+
+<section class="features-grid">
+    <div class="header-container">
+        <h3>FOR PURE PERFORMANCE</h3>
+        <p class="sub-heading">FOR PURE PERFORMANCE</p>
+    </div>
+    
+    <div class="grid-container">
+        <div class="feature-card">
+            <div class="icon-box"><img src="assets/Icon.png" alt="icon"></div>
+            <h4>INSTANT ACCELERATION</h4>
+            <p>Experience mind-bending acceleration with our advanced electric powertrain technology.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-box"><img src="assets/Icon-1.png" alt="icon"></div>
+            <h4>AERODYNAMIC PERFECTION</h4>
+            <p>Every curve designed for maximum downforce and minimal drag coefficient.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-box"><img src="assets/Icon-2.png" alt="icon"></div>
+            <h4>ADVANCED SAFETY</h4>
+            <p>Next-generation safety systems keep you protected at any speed.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-box"><img src="assets/icon3.png" alt="icon"></div>
+            <h4>PRECISION ENGINEERING</h4>
+            <p>Handcrafted with meticulous attention to every microscopic detail.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-box"><img src="assets/Icon4.png" alt="icon"></div>
+            <h4>PERFORMANCE MODES</h4>
+            <p>Multiple driving modes to suit every road condition and preference.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon-box"><img src="assets/Icon5.png" alt="icon"></div>
+            <h4>LUXURY INTERIOR</h4>
+            <p>Premium materials and cutting-edge technology in perfect harmony.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="carousel-section">
+    <div class="carousel-bg"></div>
+
+    <div class="main-model-container">
+        <div class="model-slide active" data-index="0">
+            <model-viewer
+                src="models/porche carera/2004_porsche_carrera_gt.glb"
+                ios-src="models/porche carera/2004_Porsche_Carrera_GT.usdz"
+                alt="Porsche Carrera GT"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="1.5 1.5 1.5"
+                camera-orbit="45deg 80deg 4.5m"> </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="1">
+            <model-viewer
+                src="models/718-cayman/porsche_718_cayman_gt4_2020__www.vecarz.com.glb"
+                ios-src="models/718-cayman/Porsche_718_Cayman_GT4_2020__www.vecarz.usdz"
+                alt="Porsche 718 Cayman"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.8 0.8 0.8"
+                camera-orbit="45deg 80deg 3.8m"> </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="2">
+            <model-viewer
+                src="models/porsche-boxster/2016_porsche_boxster_gts.glb"
+                ios-src="models/porsche-boxster/2016_Porsche_Boxster_GTS.usdz"
+                alt="Porsche Boxster"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.4 0.4 0.4"
+                camera-orbit="45deg 80deg 3.8m"> </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="3">
+            <model-viewer
+                src="models/red taycan/2020_porsche_taycan_turbo_s.glb"
+                alt="Porsche Taycan"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.4 0.4 0.4"
+                camera-orbit="45deg 80deg 4.5m">
+            </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="4">
+            <model-viewer
+                src="models/porsche macanne/porsche_macan 2.glb"
+                alt="Porsche Macan"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.8 0.8 0.8"
+                camera-orbit="45deg 80deg 5.5m"> </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="5">
+            <model-viewer
+                src="models/cayenne/2022_porsche_cayenne_turbo_gt.glb"
+                ios-src="models/cayenne/2022_Porsche_Cayenne_Turbo_GT.usdz"
+                alt="Porsche Cayenne"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.4 0.4 0.4"
+                camera-orbit="45deg 80deg 6.0m"> </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="6">
+            <model-viewer
+                src="models/718-spider/2010_Porsche_918_Spyder.usdz"
+                alt="Porsche 918 Spyder"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.8 0.8 0.8"
+                camera-orbit="45deg 80deg 4.8m"> </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="7">
+            <model-viewer
+                src="models/2016_porsche_911_carrera_s.glb"
+                alt="Porsche 911"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.4 0.4 0.4"
+                camera-orbit="45deg 80deg 4.5m">
+            </model-viewer>
+        </div>
+
+        <div class="model-slide" data-index="8">
+            <model-viewer
+                src="models/porsche suv 3d model.glb"
+                alt="Porsche SUV"
+                camera-controls disable-zoom shadow-intensity="1" environment-image="neutral" exposure="1.2" 
+                scale="0.8 0.8 0.8"
+                camera-orbit="45deg 80deg 6.5m"> </model-viewer>
+        </div>
+    </div>
+
+    <h2 class="car-title" id="carTitle">Porsche Carrera GT</h2>
+
+    <a href="product.html" class="explore-btn" id="exploreBtn">EXPLORE</a>
+
+    <div class="nav-dots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+        <div class="dot" data-index="4"></div>
+        <div class="dot" data-index="5"></div>
+        <div class="dot" data-index="6"></div>
+        <div class="dot" data-index="7"></div>
+        <div class="dot" data-index="8"></div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        
+        <div class="left-col">
+            <img class="footer-logo" src="assets/Group 14.png" alt="">
+            <p class="description">
+                Discover the elegance and power of Porsche, where precision engineering meets refined craftsmanship in every model.
+            </p>
+            <div class="social-icons">
+                <img src="assets/mdi_twitter.png" alt="">
+                <img src="assets/ri_facebook-fill.png" alt="">
+                <img src="assets/mingcute_instagram-fill.png" alt="">
+                <img src="assets/basil_gmail-solid.png" alt="">
+            </div>
+        </div>
+
+        <div class="right-col">
+            <h2 class="contact-heading">CONTACT US</h2>
+            <form>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Number">
+                <button type="submit" class="explore-btn">SUBMIT</button>
+            </form>
+        </div>
+
+    </div>
+</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
