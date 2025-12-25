@@ -1511,6 +1511,7 @@ model-viewer {
 }
 
 
+
 .features-list {
     flex: 1;
     display: flex;
@@ -1781,7 +1782,7 @@ model-viewer {
 
 .six-section-content {
     display: flex;
-    align-items: center; 
+    align-items: flex-end; 
     width: 100%;
     min-height: 600px;
 }
@@ -1790,7 +1791,7 @@ model-viewer {
 .six-section-image {
     width: 50%;
     height: 100%;
-    /* Ensures the div stretches to match the text height if text is longer */
+    
     align-self: stretch; 
     position: relative;
 }

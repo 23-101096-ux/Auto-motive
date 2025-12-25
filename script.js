@@ -162,25 +162,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Elements
     const slides = document.querySelectorAll('.model-slide');
     const dots = document.querySelectorAll('.dot');
     const titleElement = document.getElementById('carTitle');
+    const exploreBtn = document.getElementById('exploreBtn');
 
     // 2. Data
-    const carTitles = [
-        "Porsche Carrera GT",
-        "Porsche 718 Cayman GT4",
-        "Porsche Boxster GTS",
-        "Porsche Taycan Turbo S",
-        "Porsche Macan",
-        "Porsche Cayenne Turbo",
-        "Porsche 918 Spyder",
-        "Porsche 911 Carrera S",
-        "Porsche SUV Concept"
+    const carData = [
+        { title: "Porsche Carrera GT", page: "Parsche-carera.html" },
+        { title: "Porsche 718 Cayman GT4", page: "718-cayman.html" },
+        { title: "Porsche Boxster GTS", page: "Porsche-boxter.html" },
+        { title: "Porsche Taycan Turbo S", page: "taycan.html" },
+        { title: "Porsche Macan", page: "macane.html" },
+        { title: "Porsche Cayenne Turbo", page: "Cayenne.html" },
+        { title: "Porsche 918 Spyder", page: "718-spider.html" },
+        { title: "Porsche 911 Carrera S", page: "911.html" },
+        { title: "Porsche SPORTS Concept", page: "sports-porsche.html" }
     ];
 
     // 3. Simple Switch Function
@@ -194,7 +193,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if(dots[index]) dots[index].classList.add('active');
 
         // Update Title
-        if(titleElement) titleElement.textContent = carTitles[index];
+        if(titleElement) titleElement.textContent = carData[index].title;
+        
+        // Update Explore Button Link
+        if(exploreBtn) exploreBtn.href = carData[index].page;
     }
 
     // 4. Add Click Events to Dots
@@ -203,6 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
             switchCar(index);
         });
     });
+
+    // 5. Initialize first car
+    switchCar(0);
 });
 
 
